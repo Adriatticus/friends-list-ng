@@ -1,0 +1,13 @@
+<h3>{{title}}</h3>
+<label for="New Friend! 'Now aren't we lucky' : "></label>
+<input [(ngModel)]="newFriend" type="text">
+<button (click)="addFriend()">Add</button>
+<table>
+    <tr>
+        <td>Friend</td><td>Action</td>
+    </tr>
+    <tr *ngFor="let friend of friends">
+        <td>{{friend}}</td>
+        <td><button (click)="delFriend(friend)">Delete</button></td>
+    </tr>
+</table>
